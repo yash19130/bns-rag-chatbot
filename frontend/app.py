@@ -151,7 +151,7 @@ with st.sidebar:
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
-        st.markdown("/n" + msg["content"])
+        st.markdown(msg["content"])
         if msg.get("citations"):
             st.markdown(
                 f'<div class="citation-box"><strong>📎 Sources</strong>{msg["citations"]}</div>',
